@@ -1,0 +1,45 @@
+:root {
+  --primary: #0d5fa8;
+  --primary-dark: #0a4477;
+  --accent: #f5c75c;
+  --bg: #edf5ff;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #edf5ff;
+  color: var(--text);
+}
+
+img,
+iframe {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+app-root {
+  display: block;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 18px 32px;
+}

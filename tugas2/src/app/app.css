@@ -1,0 +1,50 @@
+﻿.page-shell {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(99, 102, 241, 0.18), transparent 25%),
+    #0a0f1f;
+  color: #ecf3ff;
+  padding-inline: clamp(1rem, 2vw, 2rem);
+}
+
+main {
+  display: block;
+}
+
+.container {
+  width: min(1210px, calc(100% - 0.5rem));
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin: 0 0 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8ab4ff;
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+section {
+  scroll-margin-top: 6rem;
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: min(100% - 1.25rem, 1120px);
+  }
+}

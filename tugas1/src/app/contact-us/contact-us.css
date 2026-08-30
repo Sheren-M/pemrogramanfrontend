@@ -1,0 +1,46 @@
+.contact-section {
+  margin: 12px 0 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.contact-section h3 {
+  margin: 0 0 16px;
+  color: #0d5fa8;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.map-column {
+  width: 100%;
+}
+
+.map-container {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid #dfeaf3;
+  box-shadow: 0 14px 28px rgba(13, 95, 168, 0.08);
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+  min-height: 420px;
+  height: 420px;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .contact-section h3 {
+    font-size: 2rem;
+  }
+}

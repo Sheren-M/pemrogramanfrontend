@@ -1,0 +1,133 @@
+:host {
+  display: block;
+}
+
+.home-page {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 28px 18px 48px;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.page-header h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  color: #0d5fa8;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid #dfeaf3;
+  border-radius: 22px;
+  box-shadow: 0 14px 30px rgba(13, 95, 168, 0.08);
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 28px 26px 22px;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(13, 95, 168, 0.08);
+  color: #0d5fa8;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.card h2 {
+  margin: 0 0 18px;
+  padding-bottom: 14px;
+  text-align: center;
+  font-size: clamp(1.8rem, 2vw, 2.5rem);
+  color: #0d5fa8;
+  border-bottom: 1px solid #e4edf7;
+  font-weight: 800;
+}
+
+.card p {
+  margin: 0 0 16px;
+  font-size: 1.04rem;
+  line-height: 1.8;
+  color: #334155;
+}
+
+.feature-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 130px;
+  padding: 20px 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffffff 0%, #eaf4ff 100%);
+  border: 1px solid #dfeaf3;
+  text-align: center;
+}
+
+.feature-item strong {
+  display: block;
+  color: #0d5fa8;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.feature-item span {
+  color: #475569;
+  font-size: 0.96rem;
+  font-weight: 600;
+}
+
+app-contact-us {
+  display: block;
+  margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+  .feature-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-page {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-body {
+    padding: 22px 18px 18px;
+  }
+}
