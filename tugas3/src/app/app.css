@@ -1,0 +1,211 @@
+/* ========================= */
+/* NGCLASS */
+/* ========================= */
+
+.special {
+  color: white;
+  background-color: green;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+/* ========================= */
+/* DIRECTIVE MANDIRI */
+/* ========================= */
+
+.directive-container {
+  max-width: 700px;
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.directive-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.directive-description {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.color-section {
+  margin-bottom: 20px;
+}
+
+.color-section input {
+  margin-left: 10px;
+  width: 45px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.highlight-demo {
+  padding: 30px;
+  border-radius: 10px;
+  border: 2px dashed #aaa;
+  text-align: center;
+}
+
+.highlight-text {
+  display: inline-block;
+  padding: 15px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.instruction {
+  margin-top: 20px;
+  text-align: center;
+  color: #555;
+}
+
+
+/* ========================= */
+/* PIPE */
+/* ========================= */
+
+.pipe-section {
+  max-width: 700px;
+  margin-top: 30px;
+}
+
+.pipe-section h1 {
+  margin-bottom: 20px;
+}
+
+
+/* BUILT-IN PIPE */
+
+.built-in-container {
+  padding: 25px;
+  margin-bottom: 25px;
+
+  border-radius: 15px;
+  border: 1px solid #ddd;
+
+  background-color: white;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.built-in-container h2 {
+  margin-top: 0;
+}
+
+.pipe-item {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 15px;
+
+  margin-top: 10px;
+
+  border-radius: 8px;
+
+  background-color: #f5f5f5;
+}
+
+.pipe-label {
+  font-weight: bold;
+}
+
+.invoice-section {
+  margin-top: 20px;
+}
+
+.invoice-section pre {
+  padding: 15px;
+
+  border-radius: 8px;
+
+  background-color: #f5f5f5;
+
+  overflow-x: auto;
+}
+
+
+/* CUSTOM PIPE */
+
+.pipe-container {
+  padding: 25px;
+
+  border-radius: 15px;
+  border: 1px solid #ddd;
+
+  background-color: white;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pipe-container h2 {
+  margin-top: 0;
+}
+
+.pipe-description {
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.pipe-container label {
+  display: block;
+
+  font-weight: bold;
+
+  margin-bottom: 8px;
+}
+
+.pipe-container input {
+  width: 100%;
+  max-width: 500px;
+
+  padding: 12px;
+
+  font-size: 16px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  box-sizing: border-box;
+}
+
+.initial-result {
+  margin-top: 25px;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  background-color: #f5f5f5;
+}
+
+.initial-result p {
+  margin: 5px;
+}
+
+.initial-result h3 {
+  margin: 10px 0 20px;
+}
+
+.initial-badge {
+  display: inline-block;
+
+  padding: 15px 25px;
+
+  border-radius: 50%;
+
+  font-size: 28px;
+  font-weight: bold;
+
+  background-color: #1976d2;
+  color: white;
+}

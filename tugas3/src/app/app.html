@@ -1,0 +1,186 @@
+<h1>Common Directive Angular 21</h1>
+
+<!-- ========================= -->
+<!-- NGCLASS -->
+<!-- ========================= -->
+
+<h2>Percobaan NgClass</h2>
+
+<button (click)="toggleSpecial()">
+  Aktif / Tidak Aktif
+</button>
+
+<p [ngClass]="{ special: isSpecial }">
+  Contoh penggunaan NgClass
+</p>
+
+<hr>
+
+
+<!-- ========================= -->
+<!-- NGSTYLE -->
+<!-- ========================= -->
+
+<h2>Percobaan NgStyle</h2>
+
+<button (click)="toggleStyle()">
+  Ubah Warna
+</button>
+
+<p [ngStyle]="currentStyles">
+  Contoh penggunaan NgStyle
+</p>
+
+<hr>
+
+
+<!-- ========================= -->
+<!-- NGMODEL -->
+<!-- ========================= -->
+
+<h2>Percobaan NgModel</h2>
+
+<label>
+  Masukkan Nama:
+  <input type="text" [(ngModel)]="name">
+</label>
+
+<p>
+  Nama yang Anda masukkan: {{ name }}
+</p>
+
+<hr>
+
+
+<!-- ========================= -->
+<!-- DIRECTIVE MANDIRI -->
+<!-- ========================= -->
+
+<div class="directive-container">
+
+  <h2 class="directive-title">
+    Penggunaan Directive Mandiri
+  </h2>
+
+  <p class="directive-description">
+    Percobaan Highlight Directive Angular 21
+  </p>
+
+  <div class="color-section">
+    <label>
+      Pilih warna highlight:
+      <input
+        type="color"
+        [(ngModel)]="highlightColor">
+    </label>
+  </div>
+
+  <div class="highlight-demo">
+
+    <h2
+      class="highlight-text"
+      appHighlight
+      [color]="highlightColor">
+
+      Angular 21
+
+    </h2>
+
+  </div>
+
+  <p class="instruction">
+    Arahkan mouse ke tulisan <b>"Angular 21"</b>
+    untuk melihat efek Highlight Directive.
+  </p>
+
+</div>
+
+<hr>
+
+
+<!-- ========================= -->
+<!-- PIPE -->
+<!-- ========================= -->
+
+<div class="pipe-section">
+
+  <h1>Percobaan Pipe Angular 21</h1>
+
+
+  <!-- ========================= -->
+  <!-- BUILT-IN PIPE -->
+  <!-- ========================= -->
+
+  <div class="built-in-container">
+
+    <h2>Built-in Pipe</h2>
+
+    <div class="pipe-item">
+      <span class="pipe-label">Customer</span>
+      <strong>{{ customer | titlecase }}</strong>
+    </div>
+
+    <div class="pipe-item">
+      <span class="pipe-label">Tanggal</span>
+      <strong>{{ issuedAt | date:'mediumDate' }}</strong>
+    </div>
+
+    <div class="pipe-item">
+      <span class="pipe-label">Total</span>
+      <strong>
+        {{ total | currency:'IDR':'symbol':'1.0-0':'id-ID' }}
+      </strong>
+    </div>
+
+    <div class="invoice-section">
+
+      <p class="pipe-label">
+        Invoice (JsonPipe)
+      </p>
+
+      <pre>{{ invoice | json }}</pre>
+
+    </div>
+
+  </div>
+
+
+  <!-- ========================= -->
+  <!-- CUSTOM PIPE -->
+  <!-- ========================= -->
+
+  <div class="pipe-container">
+
+    <h2>Custom Pipe - InitialsPipe</h2>
+
+    <p class="pipe-description">
+      Masukkan nama untuk melihat hasil InitialsPipe secara otomatis.
+    </p>
+
+    <label for="nameInput">
+      Masukkan Nama
+    </label>
+
+    <input
+      id="nameInput"
+      type="text"
+      [(ngModel)]="user.name"
+      placeholder="Masukkan nama lengkap">
+
+    <div class="initial-result">
+
+      <p>Nama Lengkap</p>
+
+      <h3>{{ user.name }}</h3>
+
+      <p>Initial</p>
+
+      <div class="initial-badge">
+        {{ user.name | initials }}
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
