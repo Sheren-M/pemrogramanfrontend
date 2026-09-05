@@ -1,0 +1,115 @@
+<div class="container">
+
+  <header class="header">
+    <div>
+      <p class="subtitle">Daily Finance</p>
+      <h1>Expense Tracker</h1>
+      <p class="description">
+        Catat dan pantau pengeluaran harian dengan lebih mudah.
+      </p>
+    </div>
+
+    <div class="icon">
+      💰
+    </div>
+  </header>
+
+
+  <section class="summary-card">
+    <div>
+      <p class="summary-label">Total Pengeluaran</p>
+      <h2>{{ totalExpense | rupiah }}</h2>
+      <p class="summary-info">
+        Total dari {{ expenses.length }} transaksi
+      </p>
+    </div>
+
+    <div class="summary-icon">
+      💳
+    </div>
+  </section>
+
+
+  <section class="expense-section">
+
+    <div class="section-header">
+      <div>
+        <h2>Daftar Pengeluaran</h2>
+        <p>Riwayat pengeluaran kamu</p>
+      </div>
+
+      <span class="transaction-count">
+        {{ expenses.length }} Transaksi
+      </span>
+    </div>
+
+
+    <div class="table-wrapper">
+
+      <table>
+
+        <thead>
+          <tr>
+            <th>Aktivitas</th>
+            <th>Kategori</th>
+            <th>Nominal</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          @for (item of expenses; track item.title) {
+
+            <tr>
+
+              <td>
+                <div class="activity">
+                  <div class="activity-icon">
+                    💸
+                  </div>
+
+                  <span>{{ item.title }}</span>
+                </div>
+              </td>
+
+
+              <td>
+                <span class="category-badge">
+                  {{ item.category | category }}
+                </span>
+              </td>
+
+
+              <td
+                class="amount"
+                [appAmountColor]="item.amount"
+              >
+                {{ item.amount | rupiah }}
+              </td>
+
+            </tr>
+
+          } @empty {
+
+            <tr>
+              <td colspan="3" class="empty">
+                Belum ada data pengeluaran.
+              </td>
+            </tr>
+
+          }
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </section>
+
+
+  <footer>
+    <p>Expense Tracker • Angular 21</p>
+  </footer>
+
+</div>

@@ -1,0 +1,212 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #f5f7fb;
+  font-family: Arial, sans-serif;
+  color: #172033;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 25px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.subtitle {
+  margin: 0 0 6px;
+  color: #5b5cf0;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.description {
+  margin: 7px 0 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 14px;
+  font-size: 23px;
+  box-shadow: 0 5px 18px #ddd;
+}
+
+/* Total Pengeluaran */
+.summary-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 25px 30px;
+  margin-bottom: 25px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px #ddd;
+}
+
+.summary-label,
+.summary-info {
+  color: #888;
+  margin: 0;
+}
+
+.summary-card h2 {
+  margin: 8px 0;
+  font-size: 30px;
+}
+
+.summary-icon {
+  background: #eef2ff;
+  border-radius: 14px;
+  padding: 15px;
+  font-size: 23px;
+}
+
+/* Daftar Pengeluaran */
+.expense-section {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px #ddd;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  margin: 0;
+}
+
+.section-header p {
+  color: #999;
+  margin: 5px 0 0;
+}
+
+.transaction-count {
+  background: #f1f2f5;
+  padding: 7px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* Tabel */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #f7f8fa;
+  color: #666;
+  text-align: left;
+  padding: 13px;
+  font-size: 12px;
+}
+
+td {
+  padding: 14px 13px;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background: #fafafa;
+}
+
+/* Aktivitas */
+.activity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.activity-icon {
+  background: #f2f3f5;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* Kategori */
+.category-badge {
+  background: #eef2ff;
+  color: #4f46e5;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Nominal */
+.amount {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Jika data kosong */
+.empty {
+  text-align: center;
+  padding: 30px;
+  color: #999;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 25px;
+  color: #999;
+  font-size: 12px;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+  .container {
+    padding: 30px 15px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .description {
+    max-width: 280px;
+  }
+
+  .summary-card,
+  .expense-section {
+    padding: 20px;
+  }
+
+  th,
+  td {
+    padding: 10px 8px;
+  }
+}
