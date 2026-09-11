@@ -1,0 +1,81 @@
+<div class="form-container">
+  <h2>Validate Form</h2>
+  <p class="description">
+    Contoh Reactive Form dengan validasi Angular 21
+  </p>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <!-- Name -->
+    <div class="form-group">
+      <label for="name">Nama</label>
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        placeholder="Masukkan nama"
+      />
+
+      @if (form.controls.name.touched && form.controls.name.invalid) {
+        <div class="error">
+          @if (form.controls.name.errors?.['required']) {
+            <span>Nama wajib diisi.</span>
+          }
+
+          @if (form.controls.name.errors?.['minlength']) {
+            <span>Nama minimal 3 karakter.</span>
+          }
+        </div>
+      }
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        placeholder="Masukkan email"
+      />
+
+      @if (form.controls.email.touched && form.controls.email.invalid) {
+        <div class="error">
+          @if (form.controls.email.errors?.['required']) {
+            <span>Email wajib diisi.</span>
+          }
+
+          @if (form.controls.email.errors?.['email']) {
+            <span>Format email tidak valid.</span>
+          }
+        </div>
+      }
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        formControlName="password"
+        placeholder="Masukkan password"
+      />
+
+      @if (form.controls.password.touched && form.controls.password.invalid) {
+        <div class="error">
+          @if (form.controls.password.errors?.['required']) {
+            <span>Password wajib diisi.</span>
+          }
+
+          @if (form.controls.password.errors?.['minlength']) {
+            <span>Password minimal 6 karakter.</span>
+          }
+        </div>
+      }
+    </div>
+
+    <button type="submit">Submit</button>
+
+  </form>
+</div>

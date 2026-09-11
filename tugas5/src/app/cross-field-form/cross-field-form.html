@@ -1,0 +1,180 @@
+<div class="form-container">
+
+  <h2>Form Pendaftaran</h2>
+
+  <p class="description">
+    Silakan lengkapi data pendaftaran
+  </p>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <!-- Nama Lengkap -->
+    <div class="form-group">
+      <label for="fullName">Nama Lengkap</label>
+
+      <input
+        id="fullName"
+        type="text"
+        formControlName="fullName"
+        placeholder="Masukkan nama lengkap"
+      />
+
+      @if (form.controls.fullName.touched && form.controls.fullName.invalid) {
+        <div class="error">
+          @if (form.controls.fullName.errors?.['required']) {
+            <span>Nama lengkap wajib diisi.</span>
+          }
+
+          @if (form.controls.fullName.errors?.['minlength']) {
+            <span>Nama minimal 3 karakter.</span>
+          }
+        </div>
+      }
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email</label>
+
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        placeholder="Masukkan email"
+      />
+
+      @if (form.controls.email.touched && form.controls.email.invalid) {
+        <div class="error">
+          Email wajib diisi dan harus menggunakan format yang benar.
+        </div>
+      }
+    </div>
+
+    <!-- Username -->
+    <div class="form-group">
+      <label for="username">Username</label>
+
+      <input
+        id="username"
+        type="text"
+        formControlName="username"
+        placeholder="Masukkan username"
+      />
+
+      @if (form.controls.username.touched && form.controls.username.invalid) {
+        <div class="error">
+          Username minimal 4 karakter.
+        </div>
+      }
+    </div>
+
+    <!-- Nomor HP -->
+    <div class="form-group">
+      <label for="phone">Nomor HP</label>
+
+      <input
+        id="phone"
+        type="text"
+        formControlName="phone"
+        placeholder="Masukkan nomor HP"
+      />
+
+      @if (form.controls.phone.touched && form.controls.phone.invalid) {
+        <div class="error">
+          Nomor HP wajib diisi dan hanya boleh menggunakan angka.
+        </div>
+      }
+    </div>
+
+    <!-- Tanggal Lahir -->
+    <div class="form-group">
+      <label for="birthDate">Tanggal Lahir</label>
+
+      <input
+        id="birthDate"
+        type="date"
+        formControlName="birthDate"
+      />
+
+      @if (form.controls.birthDate.touched && form.controls.birthDate.invalid) {
+        <div class="error">
+          Tanggal lahir wajib diisi.
+        </div>
+      }
+    </div>
+
+    <!-- Jenis Kelamin -->
+    <div class="form-group">
+      <label for="gender">Jenis Kelamin</label>
+
+      <select
+        id="gender"
+        formControlName="gender"
+      >
+        <option value="">Pilih jenis kelamin</option>
+        <option value="Laki-laki">Laki-laki</option>
+        <option value="Perempuan">Perempuan</option>
+      </select>
+
+      @if (form.controls.gender.touched && form.controls.gender.invalid) {
+        <div class="error">
+          Jenis kelamin wajib dipilih.
+        </div>
+      }
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <label for="password">Password</label>
+
+      <input
+        id="password"
+        type="password"
+        formControlName="password"
+        placeholder="Masukkan password"
+      />
+
+      @if (form.controls.password.touched && form.controls.password.invalid) {
+        <div class="error">
+          Password minimal 6 karakter.
+        </div>
+      }
+    </div>
+
+    <!-- Konfirmasi Password -->
+    <div class="form-group">
+      <label for="confirmPassword">Konfirmasi Password</label>
+
+      <input
+        id="confirmPassword"
+        type="password"
+        formControlName="confirmPassword"
+        placeholder="Masukkan ulang password"
+      />
+
+      @if (
+        form.controls.confirmPassword.touched &&
+        form.controls.confirmPassword.invalid
+      ) {
+        <div class="error">
+          Konfirmasi password wajib diisi.
+        </div>
+      }
+
+      @if (
+        form.controls.confirmPassword.touched &&
+        form.errors?.['passwordMismatch']
+      ) {
+        <div class="error">
+          Password dan konfirmasi password tidak sama.
+        </div>
+      }
+    </div>
+
+    <button type="submit">
+      Daftar
+    </button>
+
+  </form>
+
+</div>

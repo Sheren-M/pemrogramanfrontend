@@ -1,0 +1,82 @@
+.form-container {
+  max-width: 550px;
+  margin: 35px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin: 0 0 8px;
+  text-align: center;
+}
+
+.description {
+  margin: 0 0 25px;
+  text-align: center;
+  color: #666;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: white;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #555;
+}
+
+.error {
+  margin-top: 5px;
+  color: #d32f2f;
+  font-size: 13px;
+}
+
+button {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 6px;
+  background: #333;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: #555;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.success {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 6px;
+  text-align: center;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 14px;
+}
