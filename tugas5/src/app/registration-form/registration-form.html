@@ -1,0 +1,309 @@
+<div class="form-container">
+
+  <h2>Form Registrasi</h2>
+
+  <p class="description">
+    Silakan lengkapi data registrasi berikut
+  </p>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <!-- First Name -->
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+
+      <input
+        id="firstName"
+        type="text"
+        formControlName="firstName"
+        placeholder="Masukkan first name"
+      />
+
+      @if (form.controls.firstName.touched &&
+           form.controls.firstName.invalid) {
+        <div class="error">
+          First Name wajib diisi.
+        </div>
+      }
+    </div>
+
+
+    <!-- Last Name -->
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+
+      <input
+        id="lastName"
+        type="text"
+        formControlName="lastName"
+        placeholder="Masukkan last name"
+      />
+
+      @if (form.controls.lastName.touched &&
+           form.controls.lastName.invalid) {
+        <div class="error">
+          Last Name wajib diisi.
+        </div>
+      }
+    </div>
+
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email</label>
+
+      <input
+        id="email"
+        type="email"
+        formControlName="email"
+        placeholder="Masukkan email"
+      />
+
+      @if (form.controls.email.touched &&
+           form.controls.email.invalid) {
+        <div class="error">
+
+          @if (form.controls.email.errors?.['required']) {
+            <span>Email wajib diisi.</span>
+          }
+
+          @if (form.controls.email.errors?.['email']) {
+            <span>Format email tidak valid.</span>
+          }
+
+        </div>
+      }
+    </div>
+
+
+    <!-- Address -->
+    <div class="form-group">
+      <label for="address">Address</label>
+
+      <textarea
+        id="address"
+        formControlName="address"
+        placeholder="Masukkan alamat"
+      ></textarea>
+
+      @if (form.controls.address.touched &&
+           form.controls.address.invalid) {
+        <div class="error">
+          Address wajib diisi.
+        </div>
+      }
+    </div>
+
+
+    <!-- RT RW -->
+    <div class="row">
+
+      <div class="form-group">
+        <label for="rt">RT</label>
+
+        <input
+          id="rt"
+          type="text"
+          formControlName="rt"
+          placeholder="RT"
+        />
+
+        @if (form.controls.rt.touched &&
+             form.controls.rt.invalid) {
+          <div class="error">
+            RT wajib berupa angka.
+          </div>
+        }
+      </div>
+
+
+      <div class="form-group">
+        <label for="rw">RW</label>
+
+        <input
+          id="rw"
+          type="text"
+          formControlName="rw"
+          placeholder="RW"
+        />
+
+        @if (form.controls.rw.touched &&
+             form.controls.rw.invalid) {
+          <div class="error">
+            RW wajib berupa angka.
+          </div>
+        }
+      </div>
+
+    </div>
+
+
+    <!-- Kelurahan -->
+    <div class="form-group">
+      <label for="kelurahan">Kelurahan</label>
+
+      <select
+        id="kelurahan"
+        formControlName="kelurahan"
+      >
+        <option value="">-- Pilih Kelurahan --</option>
+        <option value="Batu Selicin">Batu Selicin</option>
+        <option value="Lubuk Baja Kota">Lubuk Baja Kota</option>
+        <option value="Baloi Indah">Baloi Indah</option>
+      </select>
+
+      @if (form.controls.kelurahan.touched &&
+           form.controls.kelurahan.invalid) {
+        <div class="error">
+          Kelurahan wajib dipilih.
+        </div>
+      }
+    </div>
+
+
+    <!-- Kecamatan -->
+    <div class="form-group">
+      <label for="kecamatan">Kecamatan</label>
+
+      <select
+        id="kecamatan"
+        formControlName="kecamatan"
+      >
+        <option value="">-- Pilih Kecamatan --</option>
+        <option value="Lubuk Baja">Lubuk Baja</option>
+        <option value="Batam Kota">Batam Kota</option>
+        <option value="Sekupang">Sekupang</option>
+      </select>
+
+      @if (form.controls.kecamatan.touched &&
+           form.controls.kecamatan.invalid) {
+        <div class="error">
+          Kecamatan wajib dipilih.
+        </div>
+      }
+    </div>
+
+
+    <!-- Gender -->
+    <div class="form-group">
+      <label>Gender</label>
+
+      <div class="gender-group">
+
+        <label>
+          <input
+            type="radio"
+            formControlName="gender"
+            value="Laki-laki"
+          />
+          Laki-laki
+        </label>
+
+        <label>
+          <input
+            type="radio"
+            formControlName="gender"
+            value="Perempuan"
+          />
+          Perempuan
+        </label>
+
+      </div>
+
+      @if (form.controls.gender.touched &&
+           form.controls.gender.invalid) {
+        <div class="error">
+          Gender wajib dipilih.
+        </div>
+      }
+    </div>
+
+
+    <!-- Password -->
+    <div class="form-group">
+      <label for="password">Password</label>
+
+      <input
+        id="password"
+        type="password"
+        formControlName="password"
+        placeholder="Masukkan password"
+      />
+
+      @if (form.controls.password.touched &&
+           form.controls.password.invalid) {
+        <div class="error">
+          Password minimal 6 karakter.
+        </div>
+      }
+    </div>
+
+
+    <!-- Password Confirmation -->
+    <div class="form-group">
+      <label for="passwordConfirmation">
+        Password Confirmation
+      </label>
+
+      <input
+        id="passwordConfirmation"
+        type="password"
+        formControlName="passwordConfirmation"
+        placeholder="Masukkan ulang password"
+      />
+
+      @if (form.controls.passwordConfirmation.touched &&
+           form.controls.passwordConfirmation.invalid) {
+        <div class="error">
+          Konfirmasi password wajib diisi.
+        </div>
+      }
+
+      @if (form.controls.passwordConfirmation.touched &&
+           form.errors?.['passwordMismatch']) {
+        <div class="error">
+          Password dan konfirmasi password tidak sama.
+        </div>
+      }
+    </div>
+
+
+    <!-- Reason Join -->
+    <div class="form-group">
+      <label for="reasonJoin">Reason Join</label>
+
+      <textarea
+        id="reasonJoin"
+        formControlName="reasonJoin"
+        placeholder="Tuliskan alasan bergabung"
+      ></textarea>
+
+      @if (form.controls.reasonJoin.touched &&
+           form.controls.reasonJoin.invalid) {
+        <div class="error">
+          Reason Join wajib diisi.
+        </div>
+      }
+    </div>
+
+
+    <!-- Button -->
+    <div class="button-group">
+
+      <button type="submit">
+        Submit
+      </button>
+
+      <button
+        type="button"
+        class="reset"
+        (click)="onReset()"
+      >
+        Reset
+      </button>
+
+    </div>
+
+  </form>
+
+</div>
