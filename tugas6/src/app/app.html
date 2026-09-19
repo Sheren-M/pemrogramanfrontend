@@ -1,0 +1,53 @@
+﻿<div class="app-shell">
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="brand-mark">S</span>
+      <span>Sheren</span>
+    </div>
+
+    <p class="menu-label">Navigasi utama</p>
+
+    <nav class="menu-list" aria-label="Menu utama">
+      <a class="menu-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <span class="menu-icon">▣</span>
+        <span>Dashboard</span>
+      </a>
+
+      <a class="menu-link" routerLink="/tanaman" routerLinkActive="active">
+        <span class="menu-icon">🌿</span>
+        <span>Tanaman</span>
+      </a>
+
+      <a class="menu-link" routerLink="/penjualan" routerLinkActive="active">
+        <span class="menu-icon">🛒</span>
+        <span>Penjualan</span>
+      </a>
+
+      <a class="menu-link" routerLink="/laporan" routerLinkActive="active">
+        <span class="menu-icon">📊</span>
+        <span>Laporan</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="avatar">SM</div>
+      <div>
+        <div class="user-name">Sheren Maybeline</div>
+        <div class="user-role">Administrator</div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div>
+        <h1>{{ pageTitle }}</h1>
+      </div>
+    </header>
+
+    <div class="page-wrapper">
+      <router-outlet />
+    </div>
+  </main>
+</div>
+
